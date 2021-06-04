@@ -1,0 +1,8 @@
+include ':features:home'
+include ':features:auth'
+include ':libraries:database_api'
+include ':core:core_storage'
+include ':core:core_presentation'
+include ':core:core'
+include ':app'
+rootProject.name = "KeyVal"
