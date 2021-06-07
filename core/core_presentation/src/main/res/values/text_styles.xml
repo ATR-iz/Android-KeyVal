@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.KeyVal.16" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.KeyVal.36" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">36sp</item>
+    </style>
+</resources>

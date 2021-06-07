@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/app_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_graph"
+    app:startDestination="@id/start_fragment">
+
+    <fragment android:id="@+id/start_fragment"
+        android:name="com.atriz.keyval.ui.StartFragment"/>
+
+    <include app:graph="@navigation/auth_graph" />
+    <include app:graph="@navigation/home_graph" />
+
+    <action
+        android:id="@+id/to_auth"
+        app:destination="@id/auth_graph" />
+
+    <action
+        android:id="@+id/to_home"
+        app:destination="@id/home_graph" />
 
 </navigation>

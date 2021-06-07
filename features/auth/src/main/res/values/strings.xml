@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auth_title">Добро пожаловать в хранилище ключей!</string>
+    <string name="auth_password_hint">Пароль</string>
+    <string name="auth_confirm_title">Подтвердить</string>
+    <string name="auth_password_error_description">Неверный пароль</string>
+
+    <string name="new_password_title">Придумайте новый пароль…</string>
+    <string name="new_password_hint">Введите новый пароль</string>
+    <string name="new_password_confirm_hint">Повторите пароль</string>
+    <string name="new_password_save_title">Сохранить</string>
+    <string name="new_password_error_description">Пароли не совпадают!</string>
+</resources>

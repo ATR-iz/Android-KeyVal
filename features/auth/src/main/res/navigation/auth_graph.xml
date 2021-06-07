@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_graph"
+    app:startDestination="@id/auth_navigation_fragment">
+
+    <fragment
+        android:id="@+id/auth_navigation_fragment"
+        android:name="com.atriz.auth.ui.auth_navigation.AuthNavigationFragment" >
+        <action
+            android:id="@+id/to_auth_fragment"
+            app:destination="@id/auth_fragment" />
+        <action
+            android:id="@+id/to_new_password_fragment"
+            app:destination="@id/new_password_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/auth_fragment"
+        android:name="com.atriz.auth.ui.auth.AuthFragment"
+        tools:layout="@layout/fragment_auth"/>
+
+    <fragment
+        android:id="@+id/new_password_fragment"
+        android:name="com.atriz.auth.ui.new_password.NewPasswordFragment"
+        tools:layout="@layout/fragment_new_password"/>
+
+</navigation>

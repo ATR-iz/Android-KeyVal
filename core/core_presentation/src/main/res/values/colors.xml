@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="default_background">#fafafa</color>
+    <color name="light_pale_grey">#eef0f2</color>
+    <color name="coal_gray">#3a3c3f</color>
+    <color name="silver">#b8bec5</color>
+    <color name="green">#22B068</color>
+
+    <color name="red">#FF4433</color>
+    <color name="dark_grey">#26282a</color>
+    <color name="dark_hover">#2A2D2F</color>
+    <color name="main_dark">#3A3D3F</color>
+    <color name="grey_text">#7F8690</color>
+    <color name="grey">#d4d9df</color>
+    <color name="white">#ffffff</color>
+
+    <color name="color_status_bar">#333A3D3F</color>
+</resources>
