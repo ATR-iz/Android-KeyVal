@@ -35,7 +35,7 @@ class StorageModule {
 
     @Singleton
     @Provides
-    fun provideDatabase(): DatabaseFactory {
-        return DatabaseFactory.getInstance()
+    fun provideDatabase(context: Context): DatabaseFactory {
+        return DatabaseFactory.build(context)
     }
 }
