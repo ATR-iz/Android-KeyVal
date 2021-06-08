@@ -8,7 +8,10 @@ plugins {
 dependencies {
     implementation(project(":core:core"))
     implementation(project(":features:auth"))
-    implementation(project(":features:home"))
+    implementation(project(":features:home:create_account"))
+    implementation(project(":features:home:create_group"))
+    implementation(project(":features:home:group"))
+    implementation(project(":features:home:home"))
 
     implementation(CoreDependency.TIMBER_LOGGER)
     implementation(StorageDependency.CRYPTO)

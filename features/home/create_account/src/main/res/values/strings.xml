@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="create_account_hint_name">Логин</string>
+    <string name="create_account_hint_password">Пароль</string>
+    <string name="create_account_save_title">Сохранить</string>
+</resources>

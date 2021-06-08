@@ -1,3 +1,7 @@
+include ':features:home:home'
+include ':features:home:group'
+include ':features:home:create_group'
+include ':features:home:create_account'
 include ':features:home'
 include ':features:auth'
 include ':libraries:database_api'
