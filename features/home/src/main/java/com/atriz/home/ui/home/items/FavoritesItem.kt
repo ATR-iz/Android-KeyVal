@@ -21,7 +21,7 @@ class FavoritesItem(
 
     override fun bind(viewBinding: ItemFavoritesBinding, position: Int) {
         viewBinding.favoritesTextGroup.text = groupName
-        viewBinding.favoritesTextVerificationName.text = verificationName
+        viewBinding.favoritesTextAccountName.text = verificationName
 
         if (groupIcon == null) {
             val icon = BitmapUtils.stringToBitmap(

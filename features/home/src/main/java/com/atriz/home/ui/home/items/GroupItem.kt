@@ -8,6 +8,7 @@ import com.atriz.home.utils.BitmapUtils
 import com.xwray.groupie.viewbinding.BindableItem
 
 class GroupItem(
+    val groupId: Long,
     private val groupName: String,
     private val groupIcon: Bitmap? = null
 ) : BindableItem<ItemGroupBinding>() {

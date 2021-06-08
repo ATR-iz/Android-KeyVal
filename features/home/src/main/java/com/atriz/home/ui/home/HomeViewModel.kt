@@ -32,12 +32,16 @@ class HomeViewModel @Inject constructor(
             val groupItems = mutableListOf<Group>()
 
             val groups = homeRepository.getGroups()
-            groupItems.add(GroupPageItem(groups))
+            groupItems.add(GroupPageItem(groups) { onGroupClicked(it) })
 
             val accounts = homeRepository.getAccountsWithGroup().filter { it.account.isFavorites }
             if (accounts.isNotEmpty()) groupItems.add(FavoritesPageItem(accounts))
 
             viewState.update { copy(pageItems = groupItems) }
         }
+    }
+
+    private fun onGroupClicked(idGroup: Long) {
+        events.onNext(Navigate(homeNavigation.toGroupFragment(idGroup)))
     }
 }
