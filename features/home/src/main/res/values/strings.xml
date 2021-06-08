@@ -3,4 +3,7 @@
     <string name="group_title">Группы</string>
 
     <string name="favorites_title">Избранное</string>
+
+    <string name="create_group_hint_title">Имя группы</string>
+    <string name="create_group_save_title">Сохранить</string>
 </resources>

@@ -30,4 +30,10 @@ class HomeRepository @Inject constructor(
 
         return accounts
     }
+
+    suspend fun createGroup(group: Group) {
+        withContext(Dispatchers.IO) {
+            databaseFactory.groups().insert(group)
+        }
+    }
 }
