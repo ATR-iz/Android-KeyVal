@@ -9,14 +9,50 @@
         android:id="@+id/home_fragment"
         android:name="com.atriz.home.ui.home.HomeFragment"
         tools:layout="@layout/fragment_home" >
+
         <action
             android:id="@+id/to_create_group_fragment"
             app:destination="@id/create_group_fragment" />
+        <action
+            android:id="@+id/to_group_fragment"
+            app:destination="@id/group_fragment">
+
+            <argument
+                android:name="group_id"
+                app:argType="long"/>
+        </action>
     </fragment>
 
     <fragment
         android:id="@+id/create_group_fragment"
         android:name="com.atriz.home.ui.create_group.CreateGroupFragment"
         tools:layout="@layout/fragment_create_group" />
+
+    <fragment
+        android:id="@+id/group_fragment"
+        android:name="com.atriz.home.ui.group.GroupFragment"
+        android:label="fragment_group"
+        tools:layout="@layout/fragment_group" >
+
+        <argument
+            android:name="group_id"
+            app:argType="long"/>
+
+        <action
+            android:id="@+id/to_create_account_fragment"
+            app:destination="@id/create_account_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/create_account_fragment"
+        android:name="com.atriz.home.ui.create_account.CreateAccountFragment"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account">
+
+        <argument
+            android:name="group_id"
+            app:argType="long"/>
+    </fragment>
+
 
 </navigation>

@@ -9,7 +9,7 @@ import com.xwray.groupie.GroupieAdapter
 import com.xwray.groupie.viewbinding.BindableItem
 
 class FavoritesPageItem(
-    private val favorites: List<AccountWithGroup>
+    private val favorites: List<AccountWithGroup>,
 ) : BindableItem<ItemFavoritesPageBinding>() {
     override fun getLayout() = R.layout.item_favorites_page
 

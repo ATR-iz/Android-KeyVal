@@ -6,4 +6,7 @@
 
     <string name="create_group_hint_title">Имя группы</string>
     <string name="create_group_save_title">Сохранить</string>
+
+    <string name="create_account_hint_name">Логин</string>
+    <string name="create_account_hint_password">Пароль</string>
 </resources>

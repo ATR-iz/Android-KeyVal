@@ -9,7 +9,8 @@ import com.xwray.groupie.GroupieAdapter
 import com.xwray.groupie.viewbinding.BindableItem
 
 class GroupPageItem(
-    private val groups: List<Group>
+    private val groups: List<Group>,
+    private val onGroupClicked: (idGroup: Long) -> Unit
 ) : BindableItem<ItemGroupPageBinding>() {
     override fun getLayout() = R.layout.item_group_page
 
@@ -21,8 +22,13 @@ class GroupPageItem(
 
         val items = groups.map {
             GroupItem(
-                    groupName = it.groupName
+                groupId = it.groupId,
+                groupName = it.groupName
             )
+        }
+
+        adapter.setOnItemClickListener { item, _ ->
+            onGroupClicked.invoke((item as GroupItem).groupId)
         }
 
         adapter.update(items)

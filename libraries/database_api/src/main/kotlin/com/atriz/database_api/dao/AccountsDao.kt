@@ -14,6 +14,9 @@ interface AccountsDao {
     @Query("SELECT * FROM accounts_table")
     fun getAll(): List<Account>
 
+    @Query("SELECT * FROM accounts_table WHERE group_id IN (:idGroup)")
+    fun getAllInGroup(idGroup: Long): List<Account>
+
     @Query("SELECT * FROM accounts_table WHERE account_id IN (:position)")
     fun get(position: Long?): Account
 
