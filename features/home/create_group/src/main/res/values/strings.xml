@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="create_group_hint_title">Имя группы</string>
+    <string name="create_group_save_title">Сохранить</string>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.atriz.home.ui.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/to_create_group_fragment"
+            app:destination="@id/create_group_fragment" />
+        <action
+            android:id="@+id/to_group_fragment"
+            app:destination="@id/group_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/create_group_fragment"
+        android:name="com.atriz.create_group.ui.CreateGroupFragment"
+        tools:layout="@layout/fragment_create_group" />
+
+    <fragment
+        android:id="@+id/group_fragment"
+        android:name="com.atriz.group.ui.GroupFragment"
+        android:label="fragment_group"
+        tools:layout="@layout/fragment_group" >
+
+        <action
+            android:id="@+id/to_create_account_fragment"
+            app:destination="@id/create_account_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/create_account_fragment"
+        android:name="com.atriz.create_account.ui.CreateAccountFragment"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account" />
+
+</navigation>

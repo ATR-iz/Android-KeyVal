@@ -23,8 +23,8 @@ data class Account(
     @ColumnInfo(name = "auth_password")
     val authPassword: String,
 
-    @ColumnInfo(name = "last_update")
-    val lastUpdate: String,
+    @ColumnInfo(name = "last_update_in_millis")
+    val lastUpdateInMillis: Long,
 
     @ColumnInfo(name = "is_favorites")
     val isFavorites: Boolean
