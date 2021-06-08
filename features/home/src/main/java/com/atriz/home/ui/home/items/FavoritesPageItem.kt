@@ -4,12 +4,12 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.atriz.home.R
 import com.atriz.home.databinding.ItemFavoritesPageBinding
-import com.atriz.database_api.model.Favorites
+import com.atriz.database_api.model.AccountWithGroup
 import com.xwray.groupie.GroupieAdapter
 import com.xwray.groupie.viewbinding.BindableItem
 
 class FavoritesPageItem(
-    private val favorites: List<Favorites>
+    private val favorites: List<AccountWithGroup>
 ) : BindableItem<ItemFavoritesPageBinding>() {
     override fun getLayout() = R.layout.item_favorites_page
 
@@ -21,8 +21,8 @@ class FavoritesPageItem(
 
         val items = favorites.map {
             FavoritesItem(
-                    groupName = it.groupName,
-                    verificationName = it.verificationName
+                    groupName = it.group.groupName,
+                    verificationName = it.account.authName
             )
         }
 

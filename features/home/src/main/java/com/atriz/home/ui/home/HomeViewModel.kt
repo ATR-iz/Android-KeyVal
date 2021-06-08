@@ -1,15 +1,17 @@
 package com.atriz.home.ui.home
 
+import androidx.lifecycle.viewModelScope
 import com.atriz.core_presentation.extensions.update
 import com.atriz.core_presentation.viewmodel.BaseViewModel
-import com.atriz.database_api.DatabaseFactory
+import com.atriz.home.repository.HomeRepository
 import com.atriz.home.ui.home.items.FavoritesPageItem
 import com.atriz.home.ui.home.items.GroupPageItem
 import com.xwray.groupie.Group
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class HomeViewModel @Inject constructor(
-    private val databaseFactory: DatabaseFactory,
+    private val homeRepository: HomeRepository
 ) : BaseViewModel<HomeViewState>() {
 
     init {
@@ -21,12 +23,16 @@ class HomeViewModel @Inject constructor(
     }
 
     private fun createPages() {
-        val groupItems = mutableListOf<Group>()
+        viewModelScope.launch {
+            val groupItems = mutableListOf<Group>()
 
-        groupItems.add(GroupPageItem(databaseFactory.api.getGroups()))
+            val groups = homeRepository.getGroups()
+            groupItems.add(GroupPageItem(groups))
 
-        groupItems.add(FavoritesPageItem(databaseFactory.api.getFavorites()))
+            val accounts = homeRepository.getAccountsWithGroup().filter { it.account.isFavorites }
+            if (accounts.isNotEmpty()) groupItems.add(FavoritesPageItem(accounts))
 
-        viewState.update { copy(pageItems = groupItems) }
+            viewState.update { copy(pageItems = groupItems) }
+        }
     }
 }
