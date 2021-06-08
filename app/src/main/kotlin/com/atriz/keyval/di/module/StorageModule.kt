@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
 import com.atriz.core_storage.InMemoryStorage
+import com.atriz.database_api.DatabaseFactory
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -31,4 +32,10 @@ class StorageModule {
     @Singleton
     @Provides
     fun provideInMemoryStorage(): InMemoryStorage = InMemoryStorage()
+
+    @Singleton
+    @Provides
+    fun provideDatabase(): DatabaseFactory {
+        return DatabaseFactory.getInstance()
+    }
 }
