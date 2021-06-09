@@ -4,7 +4,6 @@
         <item name="boxStrokeWidth">1dp</item>
         <item name="boxStrokeWidthFocused">1dp</item>
         <item name="boxStrokeColor">@color/text_input_box_stroke</item>
-        <item name="endIconMode">custom</item>
         <item name="endIconTint">@color/silver</item>
         <item name="hintTextAppearance">@style/TextAppearance.KeyVal.16</item>
         <item name="hintTextColor">@color/grey_text</item>

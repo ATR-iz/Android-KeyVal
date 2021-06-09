@@ -12,6 +12,7 @@ dependencies {
     implementation(project(":features:home:create_group"))
     implementation(project(":features:home:group"))
     implementation(project(":features:home:home"))
+    implementation(project(":features:home:password"))
 
     implementation(CoreDependency.TIMBER_LOGGER)
     implementation(StorageDependency.CRYPTO)

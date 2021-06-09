@@ -3,6 +3,7 @@ package com.atriz.keyval.di.module
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
+import com.atriz.core.utils.CopyToClipboard
 import com.atriz.core_storage.InMemoryStorage
 import com.atriz.database_api.DatabaseFactory
 import dagger.Module
@@ -37,5 +38,11 @@ class StorageModule {
     @Provides
     fun provideDatabase(context: Context): DatabaseFactory {
         return DatabaseFactory.build(context)
+    }
+
+    @Singleton
+    @Provides
+    fun provideCopyToClipboard(context: Context): CopyToClipboard {
+        return CopyToClipboard(context)
     }
 }

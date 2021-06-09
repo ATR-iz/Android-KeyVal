@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.atriz.core_presentation.extensions.update
 import com.atriz.core_presentation.model.Navigate
 import com.atriz.core_presentation.navigation.HomeNavigationHolder
-import com.atriz.core_presentation.navigation.NavDirectionsFactory
+import com.atriz.core_presentation.navigation.NavDirectionsWithBundle
 import com.atriz.core_presentation.viewmodel.BaseViewModel
 import com.atriz.home.repository.HomeRepository
 import com.atriz.home.ui.items.FavoritesPageItem
@@ -26,7 +26,7 @@ class HomeViewModel @Inject constructor(
     }
 
     fun onCreateGroupClicked() {
-        val toCreateGroupFragment = NavDirectionsFactory.create(
+        val toCreateGroupFragment = NavDirectionsWithBundle(
             homeNavigationHolder.toCreateGroupFragment,
             Bundle()
         )
@@ -52,7 +52,7 @@ class HomeViewModel @Inject constructor(
         val bundle = Bundle()
         bundle.putLong(HomeNavigationHolder.GROUP_ID, groupId)
 
-        val toGroupFragment = NavDirectionsFactory.create(
+        val toGroupFragment = NavDirectionsWithBundle(
             homeNavigationHolder.toGroupFragment,
             bundle
         )

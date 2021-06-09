@@ -15,5 +15,5 @@
     <color name="grey">#d4d9df</color>
     <color name="white">#ffffff</color>
 
-    <color name="color_status_bar">#333A3D3F</color>
+    <color name="transparent_background">#80000000</color>
 </resources>

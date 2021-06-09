@@ -47,8 +47,8 @@ class CreateAccountViewModel @AssistedInject constructor(
                 Account(
                     accountId = 0,
                     groupId = groupId,
-                    authName = name,
-                    authPassword = password,
+                    accountName = name,
+                    accountPassword = password,
                     lastUpdateInMillis = DateTime.now().millis,
                     isFavorites = false
                 )

@@ -40,4 +40,8 @@
         android:label="fragment_create_account"
         tools:layout="@layout/fragment_create_account" />
 
+    <dialog
+        android:id="@+id/password_fragment"
+        android:name="com.atriz.password.ui.PasswordDialog"
+        tools:layout="@layout/dialog_password"/>
 </navigation>

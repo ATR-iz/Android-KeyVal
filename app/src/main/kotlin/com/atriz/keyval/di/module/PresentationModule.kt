@@ -1,5 +1,7 @@
 package com.atriz.keyval.di.module
 
+import android.content.Context
+import android.content.res.Resources
 import com.atriz.core_presentation.navigation.HomeNavigationHolder
 import com.atriz.core_presentation.navigation.NavigationHolder
 import com.atriz.keyval.navigation.AppHomeNavigationHolder
@@ -21,5 +23,11 @@ class PresentationModule {
     @Provides
     fun provideHomeNavigationHolder(): HomeNavigationHolder {
         return AppHomeNavigationHolder()
+    }
+
+    @Singleton
+    @Provides
+    fun provideResources(context: Context): Resources {
+        return context.resources
     }
 }

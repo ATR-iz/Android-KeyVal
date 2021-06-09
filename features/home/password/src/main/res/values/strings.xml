@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="password_title">Пароль:</string>
+
+    <string name="password_copy_title">Скопировать</string>
+</resources>

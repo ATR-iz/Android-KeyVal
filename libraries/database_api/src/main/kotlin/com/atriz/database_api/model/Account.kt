@@ -18,10 +18,10 @@ data class Account(
     val groupId: Long,
 
     @ColumnInfo(name = "auth_name")
-    val authName: String,
+    val accountName: String,
 
     @ColumnInfo(name = "auth_password")
-    val authPassword: String,
+    val accountPassword: String,
 
     @ColumnInfo(name = "last_update_in_millis")
     val lastUpdateInMillis: Long,
