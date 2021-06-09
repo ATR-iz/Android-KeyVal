@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="copy_message_with_timer">Скопированно на %s секунд</string>
+</resources>

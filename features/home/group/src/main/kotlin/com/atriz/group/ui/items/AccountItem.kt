@@ -8,7 +8,10 @@ import com.xwray.groupie.viewbinding.BindableItem
 
 class AccountItem(
     private val name: String,
-    private val lastUpdate: String
+    private val password: String,
+    private val lastUpdate: String,
+    private val toPassword: (password: String) -> Unit,
+    private val copyPassword: (password: String) -> Unit
 ) : BindableItem<ItemAccountBinding>() {
 
     companion object {
@@ -20,6 +23,14 @@ class AccountItem(
     override fun bind(viewBinding: ItemAccountBinding, position: Int) {
         viewBinding.accountTextName.text = name
         viewBinding.accountTextLastUpdate.text = lastUpdate
+
+        viewBinding.accountImageViewPassword.setOnClickListener {
+            toPassword.invoke(password)
+        }
+
+        viewBinding.accountImageCopyPassword.setOnClickListener {
+            copyPassword.invoke(password)
+        }
 
         val icon = BitmapUtils.stringToBitmap(position.toString(), ICON_SIZE, R.color.coal_gray)
 

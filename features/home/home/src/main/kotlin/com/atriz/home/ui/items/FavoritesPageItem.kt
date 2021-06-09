@@ -22,7 +22,7 @@ class FavoritesPageItem(
         val items = favorites.map {
             FavoritesItem(
                 groupName = it.group.groupName,
-                accountName = it.account.authName
+                accountName = it.account.accountName
             )
         }
 

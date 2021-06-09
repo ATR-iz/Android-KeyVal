@@ -8,4 +8,5 @@ class AppHomeNavigationHolder : HomeNavigationHolder {
     override val toCreateGroupFragment = R.id.to_create_group_fragment
     override val toGroupFragment = R.id.to_group_fragment
     override val toCreateAccountFragment = R.id.to_create_account_fragment
+    override val toPasswordFragment = R.id.password_fragment
 }
