@@ -11,3 +11,4 @@ include ':core:core_presentation'
 include ':core:core'
 include ':app'
 rootProject.name = "KeyVal"
+include ':libraries:crypto_api'

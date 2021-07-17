@@ -28,4 +28,16 @@ data class Account(
 
     @ColumnInfo(name = "is_favorites")
     val isFavorites: Boolean
-) : Parcelable
+) : Parcelable {
+
+    fun convert(action: (message: String) -> String): Account {
+        return Account(
+            accountId = accountId,
+            groupId = groupId,
+            accountName = action.invoke(accountName),
+            accountPassword = action.invoke(accountPassword),
+            lastUpdateInMillis = lastUpdateInMillis,
+            isFavorites = isFavorites
+        )
+    }
+}

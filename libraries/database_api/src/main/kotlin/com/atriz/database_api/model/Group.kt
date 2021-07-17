@@ -19,4 +19,13 @@ data class Group(
 
     @ColumnInfo(name = "group_icon_path")
     val iconPath: String
-) : Parcelable
+) : Parcelable {
+
+    fun convert(action: (message: String) -> String): Group {
+        return Group(
+            groupId = groupId,
+            groupName = action.invoke(groupName),
+            iconPath = action.invoke(iconPath)
+        )
+    }
+}

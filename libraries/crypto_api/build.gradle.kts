@@ -9,5 +9,5 @@ dependencies {
     api(StorageDependency.ROOM)
     kapt(StorageDependency.ROOM_COMPILER)
     implementation(StorageDependency.ROOM_EXTENSIONS)
-    implementation(project(":libraries:crypto_api"))
+    implementation(project(":core:core_storage"))
 }
